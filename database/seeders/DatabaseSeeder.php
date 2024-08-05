@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\City;
 use App\Models\Menu;
 use App\Models\MenuItem;
-use App\Models\restaurant;
+use App\Models\Restaurant;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -29,11 +29,11 @@ class DatabaseSeeder extends Seeder
         ]);
         City::factory(10)->create();
         foreach (User::all() as $user) {
-            restaurant::factory(1)->create([
+            Restaurant::factory(1)->create([
                 'user_id' => $user->id,
             ]);
         }
-        foreach (restaurant::all() as $restaurant) {
+        foreach (Restaurant::all() as $restaurant) {
             $restaurant->menus()->createMany(
                 Menu::factory(10)->make()->toArray()
             );

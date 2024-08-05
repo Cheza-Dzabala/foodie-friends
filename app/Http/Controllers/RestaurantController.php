@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorerestaurantRequest;
 use App\Http\Requests\UpdaterestaurantRequest;
-use App\Models\restaurant;
+use App\Models\Restaurant;
 use App\Models\City;
 
 class RestaurantController extends Controller

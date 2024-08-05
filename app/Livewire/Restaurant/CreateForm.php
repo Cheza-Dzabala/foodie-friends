@@ -3,7 +3,7 @@
 namespace App\Livewire\Restaurant;
 
 use Livewire\Component;
-use App\Models\restaurant;
+use App\Models\Restaurant;
 use App\Models\City;
 use Illuminate\Support\Facades\Session;
 use Livewire\WithFileUploads;
