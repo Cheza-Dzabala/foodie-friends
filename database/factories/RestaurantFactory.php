@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\restaurant>
  */
-class RestaurantFactory extends Factory
+class restaurantFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,7 @@ class RestaurantFactory extends Factory
         return [
             'name' => $this->faker->name,
             'logo' => $this->faker->imageUrl(),
-            'description' => $this->faker->text(),
+            'description' => $this->faker->text(500),
             'address' => $this->faker->address,
             'phone_number' => $this->faker->phoneNumber,
             'city_id' => $this->faker->randomElement(\App\Models\City::pluck('id')),
